@@ -1,0 +1,161 @@
+﻿@*@model ShopF2019.Models.Cart
+
+    @{
+        ViewData["Title"] = "Details";
+    }
+
+    <h1>Details</h1>
+
+    <div>
+        <h4>Cart</h4>
+        <hr />
+        <dl class="row">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.TimeSlot)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.TimeSlot)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Subtotal)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Subtotal)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Tax)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Tax)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.TotalCost)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.TotalCost)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.CheckedOut)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.CheckedOut)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Shopper)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Shopper.Email)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.CartID">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>*@
+
+@model ShopF2019.Models.Cart
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Cart Details</h1>
+<p>
+    <a asp-action="Create" asp-controller="Orders" asp-route-id="@Model.CartID">Create Order</a> |
+</p>
+
+
+<div>
+    <h4>Cart</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TimeSlot)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TimeSlot)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Subtotal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Subtotal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tax)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tax)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TotalCost)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CheckedOut)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CheckedOut)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Shopper)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Shopper.FirstName)
+        </dd>
+    </dl>
+
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Orders)
+    </dt>
+    <dd class="col-sm-10">
+        <table class="table">
+            <tr>
+                <th>CartID</th>
+                <th>ProductID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Cost</th>
+            </tr>
+            @foreach (var item in Model.Orders)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CartID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                <a asp-action="Delete" asp-controller="Orders" asp-route-id="@item.OrderID">Delete Order</a> |
+                <a asp-action="Edit" asp-controller="Orders" asp-route-id="@item.OrderID">Edit Order</a> |
+            </td>
+
+        </tr>
+            }
+        </table>
+    </dd>
+
+
+</div>
+<div>
+    @*<a asp-action="Checkout" asp-route-id="@Model.CartID">Checkout</a> |*@
+    <a asp-action="Edit" asp-route-id="@Model.CartID">Checkout</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
