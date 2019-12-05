@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kotma\\Documents\\443 course lecture sequence\\Shopping folder\\ShopF2019 - to complete\\ShopF2019\\ShopF2019.csproj": {}
+    "W:\\CIS-443\\ShopF2019\\ShopF2019\\ShopF2019.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kotma\\Documents\\443 course lecture sequence\\Shopping folder\\ShopF2019 - to complete\\ShopF2019\\ShopF2019.csproj": {
+    "W:\\CIS-443\\ShopF2019\\ShopF2019\\ShopF2019.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kotma\\Documents\\443 course lecture sequence\\Shopping folder\\ShopF2019 - to complete\\ShopF2019\\ShopF2019.csproj",
+        "projectUniqueName": "W:\\CIS-443\\ShopF2019\\ShopF2019\\ShopF2019.csproj",
         "projectName": "ShopF2019",
-        "projectPath": "C:\\Users\\kotma\\Documents\\443 course lecture sequence\\Shopping folder\\ShopF2019 - to complete\\ShopF2019\\ShopF2019.csproj",
-        "packagesPath": "C:\\Users\\kotma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kotma\\Documents\\443 course lecture sequence\\Shopping folder\\ShopF2019 - to complete\\ShopF2019\\obj\\",
+        "projectPath": "W:\\CIS-443\\ShopF2019\\ShopF2019\\ShopF2019.csproj",
+        "packagesPath": "C:\\Users\\chlebead\\.nuget\\packages\\",
+        "outputPath": "W:\\CIS-443\\ShopF2019\\ShopF2019\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\kotma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "\\\\BLADE9\\profiles$\\chlebead\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,45 +40,11 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "Microsoft.Extensions.Logging.Debug": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            }
-          },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }
